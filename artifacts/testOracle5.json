@@ -1,0 +1,80 @@
+{
+    "version": 9,
+    "compilerVersion": "1.19.0+commit.72eaeba",
+    "contract": "TestOracle5",
+    "md5": "4bd1d9b8058222650e17835785d9833e",
+    "structs": [
+        {
+            "name": "RabinSig",
+            "params": [
+                {
+                    "name": "s",
+                    "type": "int"
+                },
+                {
+                    "name": "padding",
+                    "type": "bytes"
+                }
+            ],
+            "genericTypes": []
+        }
+    ],
+    "library": [
+        {
+            "name": "RabinVerifier",
+            "params": [],
+            "properties": [],
+            "genericTypes": []
+        },
+        {
+            "name": "RabinVerifierWOC",
+            "params": [],
+            "properties": [],
+            "genericTypes": []
+        }
+    ],
+    "alias": [],
+    "abi": [
+        {
+            "type": "function",
+            "name": "lockStep1",
+            "index": 0,
+            "params": [
+                {
+                    "name": "userSig",
+                    "type": "Sig"
+                },
+                {
+                    "name": "dataMessage",
+                    "type": "bytes"
+                },
+                {
+                    "name": "dataSig",
+                    "type": "RabinSig"
+                }
+            ]
+        },
+        {
+            "type": "constructor",
+            "params": [
+                {
+                    "name": "userPK",
+                    "type": "PubKey"
+                },
+                {
+                    "name": "amount",
+                    "type": "int"
+                },
+                {
+                    "name": "nRabin",
+                    "type": "int"
+                }
+            ]
+        }
+    ],
+    "stateProps": [],
+    "buildType": "debug",
+    "file": "file:///Z:/Projects/VSCodium/test-oracle-5/artifacts/testOracle5.scrypt",
+    "hex": "000000<userPK><amount><nRabin>615279567a75557a557a557a557a557a5179557a75547a547a547a547a4c7d19c067e2a0354dd19d25707711699f18a9103d65e586788badb257cea9583259daea7119fabc1b3d0303b2124df3f604ef0bc95ba97470d11eb747e462880c918ede3f856156ee0633906908c4ccf1651f782ca09f18d5db9e9ddc0fafd160e5928be1af6f754569596023a9780623af03df9f69b9e90e1313ee13b42b547a75537a537a537a7575756156795379ac69557955795579537961537952797e610079a80079012052967f750052967f77a85179014052967f75012052967f77a87e517a75517a756161007901007e81517a7561537954799552799751795379979c517a75517a75517a75517a75517a756177777777777777",
+    "sourceMapFile": ""
+}

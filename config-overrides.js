@@ -6,7 +6,8 @@ module.exports = function override(config, env) {
         fs: false,
         os: false,
         path: false,
-        module: false
+        module: false,
+        console: false,
     }
 
     const scopePluginIndex = config.resolve.plugins.findIndex(

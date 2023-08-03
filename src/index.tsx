@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { TestOracle5 } from './contracts/testOracle5';
+
+var artifact = require('../artifacts/testOracle5.json');
+TestOracle5.loadArtifact(artifact);
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

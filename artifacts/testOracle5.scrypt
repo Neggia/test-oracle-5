@@ -1,0 +1,16 @@
+import "../node_modules/scrypt-ts-lib/artifacts/src/rabinSignature.scrypt";
+
+contract TestOracle5 {
+  PubKey userPK;
+  int amount;
+  int oraclePubKey;
+  constructor(PubKey userPK, int amount, int nRabin) {
+    this.userPK = userPK;
+    this.amount = amount;
+    this.oraclePubKey = 1829242205158919081612948116945621074359902846590230415405905851847151653111362805089526991918515717929789289269295691772564212986498178144673616832580110190112293523954713829321239941209031548855941608655453227624899470714988234371988383378492413525943871558048853228687026003751784842839597402013721;
+  }
+  public function lockStep1(Sig userSig, bytes dataMessage, RabinSig dataSig) {
+    require(checkSig(userSig, this.userPK));
+    require(RabinVerifier.verifySig(dataMessage, dataSig, this.oraclePubKey));
+  }
+}
